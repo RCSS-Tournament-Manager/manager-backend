@@ -1,0 +1,20 @@
+version: '3.8'
+
+networks:
+  hnet:
+    ipam:
+      driver: default
+      config:
+        - subnet: 10.9.0.0/24
+
+services:
+
+  mail:
+    container_name: h_mail
+    image: mailhog/mailhog
+    ports:
+      - 8025:8025
+      - 1025:1025
+    networks:
+      hnet:
+        ipv4_address: 10.9.0.2
