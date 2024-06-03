@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+
+  pgdb:
+    image: postgres:14.1-alpine
+    restart: on-failure
+    environment:
+      POSTGRES_USER: manager
+      POSTGRES_PASSWORD: m@n@g3r
+    volumes:
+      - "db:/var/lib/postgresql/data_manager"
+    ports:
+      - "7654:5432"
+    expose:
+      - "7654"
+
+volumes:
+  db:
+    driver: local
