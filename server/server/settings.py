@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    'django.contrib.postgres',
+    "django.contrib.postgres",
     "user",
     "competition",
     "news",
@@ -97,13 +97,13 @@ MINIO_ENDPOINT = os.getenv("MINIO_STORAGE_ENDPOINT")
 MINIO_ACCESS_KEY = os.getenv("MINIO_STORAGE_ACCESS_KEY")
 MINIO_SECRET_KEY = os.getenv("MINIO_STORAGE_SECRET_KEY")
 MINIO_PRIVATE_BUCKETS = [
-    'user-avatar-private',
+    "user-avatar-private",
 ]
 MINIO_USE_HTTPS = False
 
 
 # Use MinIO as the default storage backend
-DEFAULT_FILE_STORAGE = 'django_minio_backend.models.MinioBackend'
+DEFAULT_FILE_STORAGE = "django_minio_backend.models.MinioBackend"
 
 
 # Password validation
