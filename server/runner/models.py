@@ -24,7 +24,7 @@ class Runner(models.Model):
 
 
 class RunnerServer(models.Model):
-    ip = models.IPAddressField()
+    ip = models.GenericIPAddressField(null=True)
     server_status = models.PositiveSmallIntegerField(choices=QueueStatus.choices)
     runner = models.ForeignKey(
         "runner.Runner", on_delete=models.PROTECT, related_name="servers"
