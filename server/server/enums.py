@@ -2,66 +2,66 @@ from django.db.models import IntegerChoices, TextChoices
 
 
 class Roles(IntegerChoices):
-    ADMIN = 0
-    OC = 1
-    TC = 2
-    LEADER = 3
-    MEMBER = 4
-    STAFF = 5
+    ADMIN = 0, "Admin"
+    OC = 1, "Operational Committee"
+    TC = 2, "Technical Committee"
+    LEADER = 3, "Team Leader"
+    MEMBER = 4, "Team Member"
+    STAFF = 5, "Team Staff"
 
 
 class GroupTypes(IntegerChoices):
-    POOL = 0
-    STEPLADDER = 1
+    POOL = 0, "Pool"
+    STEPLADDER = 1, "Stepladder"
 
 
 class GroupStatus(IntegerChoices):
-    NO_STATUS = 0
-    RUNNING = 1
-    ENDED = 2
-    STOPPED = 3
+    NO_STATUS = 0, "No Status"
+    RUNNING = 1, "Running"
+    ENDED = 2, "Ended"
+    STOPPED = 3, "Stopped"
 
 
 class TeamStatus(IntegerChoices):
-    ACTIVE = 0
-    WAITING = 1
-    ELIMINATED = 2
-    CHAMPION = 3
+    ACTIVE = 0, "Active"
+    WAITING = 1, "Waiting"
+    ELIMINATED = 2, "Eliminated"
+    CHAMPION = 3, "Champion"
 
 
 class MatchStatus(IntegerChoices):
-    NO_STATUS = 0
-    ERROR = 1
-    IN_QUEUE = 2
-    RUNNING = 3
-    ENDED = 4
-    STOPPED = 5
+    NO_STATUS = 0, "No Status"
+    ERROR = 1, "Error"
+    IN_QUEUE = 2, "In Queue"
+    RUNNING = 3, "Running"
+    ENDED = 4, "Ended"
+    STOPPED = 5, "Stopped"
 
 
 class ResultStatus(IntegerChoices):
-    UPLOADED = 0
-    NOT_CHECKED = 1
-    PASSED = 2
-    FAILED = 3
+    UPLOADED = 0, "Uploaded"
+    NOT_CHECKED = 1, "Not Checked"
+    PASSED = 2, "Passed"
+    FAILED = 3, "Failed"
 
 
 class RunnerStatus(IntegerChoices):
-    NOT_RESPONDING = 0
-    UP = 1
-    DOWN = 2
+    NOT_RESPONDING = 0, "Not Responding"
+    UP = 1, "Up"
+    DOWN = 2, "Down"
 
 
 class QueueStatus(IntegerChoices):
-    RUNNING = 0
-    WAITING = 1
-    STOPPED = 2
+    RUNNING = 0, "Running"
+    WAITING = 1, "Waiting"
+    STOPPED = 2, "Stopped"
 
 
 class Visibility(IntegerChoices):
-    PUBLIC = 0
-    TEAM = 1
-    TECHNICAL_COMMITTEE = 2
-    PRIVATE = 3
+    PUBLIC = 0, "Public"
+    TEAM = 1, "Team"
+    TECHNICAL_COMMITTEE = 2, "Technical Committee"
+    PRIVATE = 3, "Private"
 
 
 class ContentType(TextChoices):
